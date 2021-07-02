@@ -82,56 +82,17 @@
    	</div> <!-- /intro-content --> 
 <!--login contecnt-->
 	<div id="id01" class="modal">		
-		<section class="msger">
-			<header class="msger-header">
-			  <div class="msger-header-title">
-			  </div>
-			  <div class="msger-header-options">
-				<span><i class="fas fa-cog"></i></span>
-			  </div>
-			</header>
+		<div class="chat-output" id="chat-output">
+			<div class="user-message">
+			  <div class="message">Hi! I'm a bot. What's up?</div>
+			</div>
+		</div>
 		  
-			<main class="msger-chat">
-			  <div class="msg left-msg">
-				<div
-				 class="msg-img"
-				></div>
-		  
-				<div class="msg-bubble">
-				  <div class="msg-info">
-					<div class="msg-info-name">toTur</div>
-					<div class="msg-info-time">12:45</div>
-				  </div>
-		  
-				  <div class="msg-text">
-					Welcome! Go ahead and send me a message.
-				  </div>
-				</div>
-			  </div>
-		  
-			  <div class="msg right-msg">
-				<div
-				 class="msg-img"
-				></div>
-		  
-				<div class="msg-bubble">
-				  <div class="msg-info">
-					<div class="msg-info-name">You</div>
-					<div class="msg-info-time">12:46</div>
-				  </div>
-				  	Hello World!
-				  <div class="msg-text">
-					
-				  </div>
-				</div>
-			  </div>
-			</main>
-		  
-			<form class="msger-inputarea">
-			  <input type="text" class="msger-input" placeholder="Enter your message...">
-			  <button type="submit" class="msger-send-btn">Send</button>
+		  <div class="chat-input">
+			<form action="#0" id="user-input-form">
+			  <input type="text" id="user-input" class="user-input" placeholder="Talk to the bot." autocomplete="off">
 			</form>
-		  </section>
+		  </div>
 	</div>   
 <!-- /login -->
 <!--======================== sign up section ======================================-->
@@ -163,11 +124,40 @@
 	var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-    	if (event.target == modal) {
-        	modal.style.display = "none";
-    	}
-	}
+	//window.onclick = function(event) {
+    //	if (event.target == modal) {
+      //  	modal.style.display = "none";
+    //	}
+	//}
+	var outputArea = $("#chat-output");
+
+	$("#user-input-form").on("submit", function(e) {
+	
+ 	 e.preventDefault();
+	
+	  var message = $("#user-input").val();
+  
+ 	 outputArea.append(`
+ 	   <div class='bot-message'>
+ 	     <div class='message'>
+ 	       ${message}
+ 	     </div>
+ 	   </div>
+ 	 `);
+  
+  	setTimeout(function() {
+    	outputArea.append(`
+      	<div class='user-message'>
+        	<div class='message'>
+          	I'm like 20 lines of JavaScript I can't actually talk to you.
+        	</div>
+    	  </div>
+   	 `);
+ 	 }, 250);
+  
+ 	 $("#user-input").val("");
+  
+	});
    </script>
 
 </body>
