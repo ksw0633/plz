@@ -7,7 +7,7 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Kards</title>
+	<title>toTuring</title>
 	<meta name="description" content="">  
 	<meta name="author" content="">
 
@@ -43,15 +43,12 @@
    			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
 	   		<div class="logo">
-		         <a href="./index.html">KARD</a>
+		         <a href="./index.html">toTuring</a>
 		      </div>		      
 
 		   	<nav id="main-nav-wrap">
 					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
 						<li><a class="smoothscroll"  href="./about.html" title="">About</a></li>
-						<li><a class="smoothscroll"  href="./ranking.html" title="">Ranking</a></li>
-						<li><a class="smoothscroll"  href="./login.html" title="">Sign Up</a></li>
 					</ul>
 			</nav>
    		</div> <!-- /top-bar --> 
@@ -71,13 +68,13 @@
    			<div class="col-twelve">
 
 	   			<!--<h5>Hello, World.</h5>-->
-	   			<h1>Gomoku Online</h1>
+	   			<h1>toTuring</h1>
 
 	   			<p class="intro-position">
-	   				<span>Compete the world with a simple but outstanding game</span>
+	   				<span>The AI-chatbot for your programming questions</span>
 	   			</p>
 
-	   			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button stroke smoothscroll" href="#" title="">Login/Sign Up</button>
+	   			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button stroke smoothscroll" href="#" title="">Ask Now</button>
 
 	   		</div>  
    			
@@ -85,43 +82,71 @@
    	</div> <!-- /intro-content --> 
 <!--login contecnt-->
 	<div id="id01" class="modal">		
-		<form class="modal-content animate" action="/action_page.php" method="post">
-			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-			<div class="container">	
-				<label for="uname"><b>Username</b></label>
-				<input type="text" placeholder="Enter Username" name="uname" required>
-				<label for="psw"><b>Password</b></label>
-				<input type="password" placeholder="Enter Password" name="psw" required>
-				<button type="submit">Login</button>
-				<label>
-			  		<input type="checkbox" checked="checked" name="remember"> Remember me
-				</label>
-			</div>
-			<div class="container">
-				<span class="font"><a href="#">Forgot Password?</a></span>
-				<span class="font"><a href="#">Sign up</a></span>
-			</div>
-		</form>
+		<section class="msger">
+			<header class="msger-header">
+			  <div class="msger-header-title">
+			  </div>
+			  <div class="msger-header-options">
+				<span><i class="fas fa-cog"></i></span>
+			  </div>
+			</header>
+		  
+			<main class="msger-chat">
+			  <div class="msg left-msg">
+				<div
+				 class="msg-img"
+				></div>
+		  
+				<div class="msg-bubble">
+				  <div class="msg-info">
+					<div class="msg-info-name">toTur</div>
+					<div class="msg-info-time">12:45</div>
+				  </div>
+		  
+				  <div class="msg-text">
+					Welcome! Go ahead and send me a message.
+				  </div>
+				</div>
+			  </div>
+		  
+			  <div class="msg right-msg">
+				<div
+				 class="msg-img"
+				></div>
+		  
+				<div class="msg-bubble">
+				  <div class="msg-info">
+					<div class="msg-info-name">You</div>
+					<div class="msg-info-time">12:46</div>
+				  </div>
+				  	Hello World!
+				  <div class="msg-text">
+					
+				  </div>
+				</div>
+			  </div>
+			</main>
+		  
+			<form class="msger-inputarea">
+			  <input type="text" class="msger-input" placeholder="Enter your message...">
+			  <button type="submit" class="msger-send-btn">Send</button>
+			</form>
+		  </section>
 	</div>   
 <!-- /login -->
 <!--======================== sign up section ======================================-->
 
 <footer>
 
-	   <div class="col-six tab-full">
-		   <div class="copyright">
-				 <span>© Copyright Kards 2016.</span> 
-				 <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
-			  </div>		                  
-		   </div>
-
-	   </div> <!-- /row -->     	
+	<div class="col-six tab-full">
+		<div class="copyright">
+			  <span>© Copyright Kards 2016.</span> 
+			  <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
+		   </div>		                  
+		</div>
+	</div> <!-- /row -->     	
 </footer>  
-<!--/sign up-->
-   </section> <!-- /intro -->
 
-   <!-- footer
-   ================================================== -->
 
 
    <div id="preloader"> 
