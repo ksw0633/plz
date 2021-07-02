@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Kards</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>   	
+   	<div class="row">
+
+   		<div class="top-bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>
+
+	   		<div class="logo">
+		         <a href="./index.html">KARD</a>
+		      </div>		      
+
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll"  href="./about.html" title="">About</a></li>
+						<li><a class="smoothscroll"  href="./ranking.html" title="">Ranking</a></li>
+						<li><a class="smoothscroll"  href="./login.html" title="">Sign Up</a></li>
+					</ul>
+			</nav>
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 		
+   </header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
+
+   	<div class="intro-overlay"></div>	
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+	   			<!--<h5>Hello, World.</h5>-->
+	   			<h1>Gomoku Online</h1>
+
+	   			<p class="intro-position">
+	   				<span>Compete the world with a simple but outstanding game</span>
+	   			</p>
+
+	   			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="button stroke smoothscroll" href="#" title="">Login/Sign Up</button>
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content --> 
+<!--login contecnt-->
+	<div id="id01" class="modal">		
+		<form class="modal-content animate" action="/action_page.php" method="post">
+			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+			<div class="container">	
+				<label for="uname"><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="uname" required>
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="psw" required>
+				<button type="submit">Login</button>
+				<label>
+			  		<input type="checkbox" checked="checked" name="remember"> Remember me
+				</label>
+			</div>
+			<div class="container">
+				<span class="font"><a href="#">Forgot Password?</a></span>
+				<span class="font"><a href="#">Sign up</a></span>
+			</div>
+		</form>
+	</div>   
+<!-- /login -->
+<!--======================== sign up section ======================================-->
+
+<footer>
+
+	   <div class="col-six tab-full">
+		   <div class="copyright">
+				 <span>© Copyright Kards 2016.</span> 
+				 <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
+			  </div>		                  
+		   </div>
+
+	   </div> <!-- /row -->     	
+</footer>  
+<!--/sign up-->
+   </section> <!-- /intro -->
+
+   <!-- footer
+   ================================================== -->
+
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+   <script>
+	   // Get the modal
+	var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+    	if (event.target == modal) {
+        	modal.style.display = "none";
+    	}
+	}
+   </script>
+
+</body>
+
+</html>
